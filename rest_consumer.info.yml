@@ -1,0 +1,7 @@
+name: REST Consumer
+type: module
+core_version_requirement: ^9 || ^10
+description: Loads posts from Wordpress via REST endpoint.
+package: REST Consumer
+
+configure: rest_consumer.admin_settings

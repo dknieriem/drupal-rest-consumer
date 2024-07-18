@@ -1,0 +1,4 @@
+administer rest_consumer:
+  title: 'Administer REST Consumer Settings'
+  description: 'Access the REST Consumer administrative settings page.'
+  restrict access: true

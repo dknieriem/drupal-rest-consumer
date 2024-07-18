@@ -1,0 +1,14 @@
+{
+    "name": "drupal/rest_consumer",
+    "type": "drupal-custom-module",
+    "license": "GPL-2.0-or-later+",
+    "description": "Drupal module that consumes and displays posts from WordPress JSON endpoints",
+    "homepage": "https://github.com/dknieriem/drupal-rest-consumer",    
+    "authors": [
+        {
+            "name": "Don Knieriem",
+            "email": "donald.knieriem@gmail.com",
+            "homepage": "https://github.com/dknieriem"
+        }
+    ]
+}

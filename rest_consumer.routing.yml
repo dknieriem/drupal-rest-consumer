@@ -1,0 +1,15 @@
+rest_consumer.admin_settings:
+  path: /admin/config/services/rest_consumer
+  defaults: 
+    _form: '\Drupal\rest_consumer\Form\RestSettingsForm'
+    _title: 'REST Consumer Settings'
+  requirements:
+    _permission: 'administer rest_consumer'
+
+rest_consumer.page:
+  path: /admin/reports/rest_page
+  defaults:
+    _controller: '\Drupal\rest_consumer\Controller\RestController::page'
+    _title: 'Posts from REST Endpoint'
+  requirements:
+    _permission: 'administer rest_consumer'
