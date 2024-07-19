@@ -252,16 +252,29 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 0
+          results_lifespan_custom: 900
+          output_lifespan: 3600
+          output_lifespan_custom: 900
       empty: {  }
       sorts: {  }
       arguments: {  }
       filters: {  }
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
       row:
         type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       query:
         type: views_query
         options: {  }

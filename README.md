@@ -8,17 +8,11 @@ Created page and block to display WordPress posts. Cached to 15 mins max age.
 
 ## The Views Way
 
-Add EntityType for RemotePost with appropriate fields
+Add View plugin for remote post data with appropriate fields
 
-Add a View to display N most recent RemotePost entities
+Add a View to display N most recent remote post 'entities'
 
 Cache view to 15 mins max age.
-
-Hook view view, so when cache is missed,
-
-  1. Delete all RemotePost entities
-  2. Hit the rest endpoint
-  3. Generate a RemotePost for each post returned
 
 ## Other methods
 

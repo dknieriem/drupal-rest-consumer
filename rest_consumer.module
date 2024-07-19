@@ -28,5 +28,17 @@ function rest_consumer_theme($existing, $type, $theme, $path) {
         'url' => NULL,  
       ],
     ],
+    'views_view__rest_consumer_posts' => [
+      'template' => 'views-view--rest-consumer-posts',
+      'base hook' => 'view',
+    ],
+    'views_view_unformatted__rest_consumer_posts' => [
+      'template' => 'views-view-unformatted--rest-consumer-posts',
+      'base hook' => 'view',
+    ],
+    'views_view_fields__rest_consumer_posts' => [
+      'template' => 'views-view-fields--rest-consumer-posts',
+      'base hook' => 'view_fields',
+    ]
   ];
 }
