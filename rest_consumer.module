@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * rest_consumer module hooks.
+ */
+
+/**
+ * Implements hook_theme()
+ */
+function rest_consumer_theme($existing, $type, $theme, $path) {
+  return [
+    'rest_consumer_page' => [
+      'template' => 'recent-posts',
+      'path' => $path . '/templates',
+      'variables' => [
+        'posts' => [],
+      ],
+      
+    ],
+    'rest_consumer_post' => [
+      'template' => 'post',
+      'path' => $path . '/templates',
+      'variables' => [ 
+        'id' => NULL,
+        'date' => NULL,
+        'title' => NULL,
+        'url' => NULL,  
+      ],
+    ],
+  ];
+}

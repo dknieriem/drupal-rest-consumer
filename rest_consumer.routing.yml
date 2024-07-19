@@ -6,10 +6,18 @@ rest_consumer.admin_settings:
   requirements:
     _permission: 'administer rest_consumer'
 
-rest_consumer.page:
+rest_consumer.admin_page:
   path: /admin/reports/rest_page
   defaults:
-    _controller: '\Drupal\rest_consumer\Controller\RestController::page'
+    _controller: '\Drupal\rest_consumer\Controller\RestController::admin_page'
     _title: 'Posts from REST Endpoint'
   requirements:
     _permission: 'administer rest_consumer'
+
+rest_consumer.page:
+  path: /recent_posts
+  defaults:
+    _controller: '\Drupal\rest_consumer\Controller\RestController::rest_page'
+    _title: 'Recent Posts'
+  requirements:
+    _permission: 'access content'

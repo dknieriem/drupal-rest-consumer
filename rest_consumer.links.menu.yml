@@ -6,8 +6,8 @@ rest_consumer.admin_settings_link:
   weight: 10
 
 rest_consumer.page_link:
-  title: Admin view of posts available at the REST endpoint
+  title: Admin view of REST endpoint
   description: View REST endpoint posts
-  route_name: rest_consumer.page
+  route_name: rest_consumer.admin_page
   parent: system.admin_reports
   weight: -5

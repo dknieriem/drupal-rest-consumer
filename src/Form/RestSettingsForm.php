@@ -41,6 +41,20 @@ class RestSettingsForm extends ConfigFormBase {
       '#description' => $this->t('Posts will be loaded via the REST endpoint at this URL. An invalid or inaccessible URL will result in errors in your dblog. Check /admin/'),
     ];
 
+    $form['rest_page_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable a public page to view REST endpoint posts'),
+      '#default_value' => $config->get('rest_page_enabled'),
+      '#description' => $this->t('Exposes the URL /recent-posts'),
+    ];
+
+    $form['rest_block_enabled'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable a block to view REST endpoint posts'),
+      '#default_value' => $config->get('rest_block_enabled'),
+      '#description' => $this->t('Enables the block if it has been placed in the block layout'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -48,10 +62,13 @@ class RestSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $new_endpoint = array_filter($form_state->getValue('rest_endpoint'));
-
+    $new_endpoint = $form_state->getValue('rest_endpoint');
+    $rest_page_enabled = $form_state->getValue('rest_page_enabled');
+    $rest_block_enabled = $form_state->getValue('rest_block_enabled');
     $this->config('rest_consumer.settings')
       ->set('rest_endpoint', $new_endpoint)
+      ->set('rest_page_enabled', $rest_page_enabled)
+      ->set('rest_block_enabled', $rest_block_enabled)
       ->save();
 
     parent::submitForm($form, $form_state);
